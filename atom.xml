@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junmo666.github.io/"/>
-  <updated>2018-10-27T11:32:50.179Z</updated>
+  <updated>2018-10-27T11:34:58.266Z</updated>
   <id>https://junmo666.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://junmo666.github.io/2018/10/27/nmap%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/"/>
     <id>https://junmo666.github.io/2018/10/27/nmap进阶使用/</id>
     <published>2018-10-27T11:19:50.000Z</published>
-    <updated>2018-10-27T11:32:50.179Z</updated>
+    <updated>2018-10-27T11:34:58.266Z</updated>
     
-    <content type="html"><![CDATA[<p>本章介绍的是端口扫描工具nmap,我们已经在第一章学会了安装现在来教大家其他的进阶用法。</p><p><img src="https://t1.picb.cc/uploads/2018/10/26/JbI86d.jpg" alt="nmap"></p><a id="more"></a><h3 id="1-指定目标"><a href="#1-指定目标" class="headerlink" title="1.指定目标"></a>1.指定目标</h3><p><strong>1.</strong> 192.168.1.0/24 扫描整个网段 0./24 代表0-255</p><p><strong>2.</strong> 指定范围 192.168.1.1-255 192.168.1-255.1（任意位置） </p><blockquote><p>nmap -iL 文件名 (扫描文件里面的ip,要注意参数大小写哦！)</p><p>nmap -iR 数量 (该参数可以用来选择随机Internet主机进行扫描。 NMAP会随机生成目标的指定数量，并试图对其进行扫描)</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -excludefile &lt;文件名&gt; （不扫描文件里面包含的ip）</div></pre></td></tr></table></figure><h3 id="2-主机发现"><a href="#2-主机发现" class="headerlink" title="2.主机发现"></a>2.主机发现</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">nmap <span class="_">-s</span>L（列出给出目标的具体内容，默认会对地址进行反向解析，显示主机名。）</div></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">-sn（不进行端口扫描）</div></pre></td></tr></table></figure><p>在以前的Nmap中，-sn被称为-sP。-sP（Ping扫描）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">-Pn（无ping扫描,跳过主机发现阶段，把每个都IP当成存活主机。）</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>本章介绍的是端口扫描工具nmap,我们已经在第一章学会了安装现在来教大家其他的进阶用法。</p><p><img src="https://t1.picb.cc/uploads/2018/10/26/JbI86d.jpg" alt="nmap"></p><a id="more"></a><h3 id="1-指定目标"><a href="#1-指定目标" class="headerlink" title="1.指定目标"></a>1.指定目标</h3><p><strong>1.</strong> 192.168.1.0/24 扫描整个网段 0./24 代表0-255</p><p><strong>2.</strong> 指定范围 192.168.1.1-255 192.168.1-255.1（任意位置） </p><blockquote><p>nmap -iL 文件名 (扫描文件里面的ip,要注意参数大小写哦！)</p><p>nmap -iR 数量 (该参数可以用来选择随机Internet主机进行扫描。 NMAP会随机生成目标的指定数量，并试图对其进行扫描)</p><p>nmap -excludefile &lt;文件名&gt; （不扫描文件里面包含的ip）</p></blockquote><h3 id="2-主机发现"><a href="#2-主机发现" class="headerlink" title="2.主机发现"></a>2.主机发现</h3><blockquote><p>nmap -sL（列出给出目标的具体内容，默认会对地址进行反向解析，显示主机名。）</p><p>-sn（不进行端口扫描）</p></blockquote><p>在以前的Nmap中，-sn被称为-sP。-sP（Ping扫描）</p><blockquote><p>-Pn（无ping扫描,跳过主机发现阶段，把每个都IP当成存活主机。）</p></blockquote>]]></content>
     
     <summary type="html">
     
