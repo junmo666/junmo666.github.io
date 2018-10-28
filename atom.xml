@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junmo666.github.io/"/>
-  <updated>2018-10-27T13:43:08.592Z</updated>
+  <updated>2018-10-28T06:04:56.530Z</updated>
   <id>https://junmo666.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>虚拟机软件安装</title>
+    <link href="https://junmo666.github.io/2018/10/28/%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    <id>https://junmo666.github.io/2018/10/28/虚拟机软件安装/</id>
+    <published>2018-10-28T05:44:48.000Z</published>
+    <updated>2018-10-28T06:04:56.530Z</updated>
+    
+    <content type="html"><![CDATA[<p>VMWare (Virtual Machine ware)是一个“虚拟PC”软件公司.它的产品可以使你在一台机器上同时运行二个或更多Windows</p><a id="more"></a><p>、DOS、LINUX系统。与“多启动”系统相比，VMWare采用了完全不同的概念。</p><pre><code>多启动系统在一个时刻只能运行一个系统，在系统切换时需要重新启动机器。VMWare是真正“同时”运行，多个操作系统在主系统的平台上，就象标准Windows应用程序那样切换。而且每个操作系统你都可以进行虚拟的分区、配置而不影响真实硬盘的数据，你甚至可以通过网卡将几台虚拟机用网卡连接为一个局域网，极其方便。安装在VMware操作系统性能上比直接安装在硬盘上的系统低不少，因此，比较适合学习和测试。</code></pre><h3 id="1、VMware下载"><a href="#1、VMware下载" class="headerlink" title="1、VMware下载"></a>1、VMware下载</h3><p>这里我们直接百度搜索下载</p><p><img src="https://i.loli.net/2018/10/28/5bd54ed63f321.png" alt="百度搜索"></p><h3 id="2、VMware安装"><a href="#2、VMware安装" class="headerlink" title="2、VMware安装"></a>2、VMware安装</h3><p>下载好后运行压缩包里面的文件</p><p><img src="https://i.loli.net/2018/10/28/5bd54f87c203d.png" alt="vm安装"></p><p><img src="https://i.loli.net/2018/10/28/5bd54fd1e560a.png" alt="vm安装"></p><p><img src="https://i.loli.net/2018/10/28/5bd54fee7fc0c.png" alt="vm安装"></p><p>这里可以选择自己想要的安装位置。</p><p><img src="https://i.loli.net/2018/10/28/5bd5501bdf618.png" alt="vm安装"></p><p><img src="https://i.loli.net/2018/10/28/5bd550562f479.png" alt="vm安装"></p><p><img src="https://i.loli.net/2018/10/28/5bd55071557b5.png" alt="vm安装"></p><p>下面点击许可证,这里有2个激活码大家可以用一下<strong>FF31K-AHZD1-H8ETZ-8WWEZ-WUUVA</strong> <strong>CV7T2-6WY5Q-48EWP-ZXY7X-QGUWD</strong></p><p><img src="https://i.loli.net/2018/10/28/5bd5508c7f767.png" alt="VM安装"> </p><p>安装完成可以在桌面打开运行啦。</p><p><img src="https://i.loli.net/2018/10/28/5bd55169bd8a7.png" alt="vm"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;VMWare (Virtual Machine ware)是一个“虚拟PC”软件公司.它的产品可以使你在一台机器上同时运行二个或更多Windows&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="虚拟机" scheme="https://junmo666.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+    
+      <category term="虚拟机" scheme="https://junmo666.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+      <category term="应用安装" scheme="https://junmo666.github.io/tags/%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
   
   <entry>
     <title>nmap进阶使用</title>
@@ -58,9 +82,9 @@
       <category term="渗透工具" scheme="https://junmo666.github.io/categories/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="nmap" scheme="https://junmo666.github.io/tags/nmap/"/>
-    
       <category term="应用安装" scheme="https://junmo666.github.io/tags/%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="nmap" scheme="https://junmo666.github.io/tags/nmap/"/>
     
   </entry>
   
