@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="mo3.top/"/>
-  <updated>2018-10-31T05:15:08.547Z</updated>
+  <updated>2018-10-30T10:22:52.677Z</updated>
   <id>mo3.top/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试</title>
-    <link href="mo3.top/2018/10/31/%E6%B5%8B%E8%AF%95/"/>
-    <id>mo3.top/2018/10/31/测试/</id>
-    <published>2018-10-31T05:12:21.000Z</published>
-    <updated>2018-10-31T05:15:08.547Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;wwwwwwwwwwwwwwwwww&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>linux常用命令</title>
