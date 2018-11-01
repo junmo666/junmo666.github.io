@@ -5,11 +5,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="nmap的安装以及使用, JunMo的博客">
-    <meta name="description" content="本章介绍的是端口扫描工具nmap,用来扫描网上电脑开放的网络连接端。具体功能是确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统。它是网络管理员必用的软件之一，以及用以评估网络系统安全。
-
-
-1.安装nmapnmap官网地址：ht">
+    <meta name="keywords" content="Windows常用命令, JunMo的博客">
+    <meta name="description" content="大家都熟悉windows图形操作界面，其实windows还有一套cmd命令同样可以实现基本的操作，知道一些常用的命令
+对我们使用计算机也有好处。
+1.打开cmd首先，打开cmd命令，windows窗口键(键盘上4个方块的键)+R,打开运行，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>nmap的安装以及使用 | JunMo的博客</title>
+    <title>Windows常用命令 | JunMo的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -192,13 +191,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/10/27/5bd46b61d71d6.jpeg')">
+<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/11/01/5bdaca2c2699f.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        nmap的安装以及使用
+                        Windows常用命令
                     </div>
                 </div>
             </div>
@@ -218,12 +217,8 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/应用安装/" target="_blank">
-                    <span class="chip bg-color">应用安装</span>
-                </a>
-                
-                <a href="/tags/nmap/" target="_blank">
-                    <span class="chip bg-color">nmap</span>
+                <a href="/tags/Windows/" target="_blank">
+                    <span class="chip bg-color">Windows</span>
                 </a>
                 
             </div>
@@ -233,48 +228,329 @@
                 <span class="post-cate">
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/渗透工具/" class="post-category" target="_blank">
-                        渗透工具
+                    <a href="/categories/Windows/" class="post-category" target="_blank">
+                        Windows
                     </a>
                     
                 </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-10-26
+                    <i class="fa fa-clock-o fa-fw"></i>2018-11-01
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本章介绍的是端口扫描工具nmap,用来扫描网上电脑开放的网络连接端。具体功能是确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统。它是网络管理员必用的软件之一，以及用以评估网络系统安全。</p>
-<p><img src="https://t1.picb.cc/uploads/2018/10/26/JbI86d.jpg" alt="nmap"></p>
-<a id="more"></a>
-<h3 id="1-安装nmap"><a href="#1-安装nmap" class="headerlink" title="1.安装nmap"></a>1.安装nmap</h3><p>nmap官网地址：<a href="https://nmap.org/" target="_blank" rel="external">https://nmap.org/</a>  </p>
-<p>Linux:在Linux终端上运行如下命令：apt-get install nmap</p>
-<p><img src="https://i.loli.net/2018/10/26/5bd319c20d9e2.png" alt="下载图片"></p>
-<p><a href="https://nmap.org/download.html#windows" target="_blank" rel="external">Windows版本下载地址点我</a>  </p>
-<h3 id="2-入门扫描"><a href="#2-入门扫描" class="headerlink" title="2.入门扫描"></a>2.入门扫描</h3><p>Windows 打开cmd窗口</p>
-<p>linux  打开终端即可</p>
-<p>在cmd窗口里面输入 <strong>nmap ip地址</strong></p>
-<p>我们除了可以直接扫描IP，也可以扫描网站</p>
-<p><img src="https://i.loli.net/2018/10/26/5bd31eca31b6a.png" alt="nmap baidu"></p>
-<p><strong>nmap www.baidu.com</strong></p>
-<p>这里我们用百度做示范，扫描了百度的开放端口，也是使用了<strong>nmap &lt;目标主机&gt;</strong>的扫描语句</p>
-<h3 id="3-Nmap扫描多个IP-主机"><a href="#3-Nmap扫描多个IP-主机" class="headerlink" title="3.Nmap扫描多个IP/主机"></a>3.Nmap扫描多个IP/主机</h3><p><strong>nmap 192.168.1.1 192.168.1.2</strong></p>
-<p><img src="https://i.loli.net/2018/10/26/5bd32474a6d51.png" alt="nmap 192 1 2"></p>
-<p>如上，这里我们扫描了 192.168.1.1与192.168.1.2这两个IP</p>
-<p>我们要将扫描的主机用空格隔开，比如<strong>nmap 192.168.1.1&lt;空格&gt;192.168.1.100</strong>，这样就可以扫描192.168.1.1和192.168.1.2两台主机的信息了</p>
-<h3 id="4-扫描一个网段的主机信息"><a href="#4-扫描一个网段的主机信息" class="headerlink" title="4.扫描一个网段的主机信息"></a>4.扫描一个网段的主机信息</h3><p><strong>nmap 192.168.0/24</strong></p>
-<p>我们只需要更改一下搜索的目标就可以扫描，这里扫描了192.168.1.0-255这一整个网段，利用的指令还是<strong>nmap 192.168.1.0/24</strong></p>
-<p><img src="https://i.loli.net/2018/10/26/5bd3251aa4a91.png" alt="nmap 0/24"></p>
-<p>这里需要注意的是，扫描一整个网段需要的时间较长，<strong>如果想要查看扫描进度可以在终端中按下Tab键便可以查看扫描进度</strong></p>
-<h3 id="5-描某个范围内的存活主机"><a href="#5-描某个范围内的存活主机" class="headerlink" title="5.描某个范围内的存活主机"></a>5.描某个范围内的存活主机</h3><p><strong>nmap 192.168.1.1-100</strong></p>
-<p><img src="https://i.loli.net/2018/10/26/5bd325a5aadcc.png" alt="nmap 1-100"></p>
-<p>这里我们使用了nmap 192.168.1.1-100的指令，意思是扫描192.168.1.1到192.168.1.200这一IP段中存活的主机，我们只需要将搜索目标的IP增加范围即可</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><strong>在我们的Nmap扫描教程第一节中，我们学习了如何扫描单个主机/多个主机/整个网段以及某个IP段的存活主机信息</strong></p>
-<p><strong>但是Nmap中还有许多有趣的扫描方式，这里我们暂且不提，在下一节的教程中，我们将学习不同协议的扫描方式</strong></p>
+                <p>大家都熟悉windows图形操作界面，其实windows还有一套cmd命令同样可以实现基本的操作，知道一些常用的命令<br><a id="more"></a></p>
+<p>对我们使用计算机也有好处。</p>
+<h3 id="1-打开cmd"><a href="#1-打开cmd" class="headerlink" title="1.打开cmd"></a>1.打开cmd</h3><p>首先，打开cmd命令，windows窗口键(键盘上4个方块的键)+R,打开运行，输入cmd确定，或者打开开始菜单，在搜索程序和文件的输入框中输入cmd.</p>
+<p><img src="https://i.loli.net/2018/11/01/5bdac448dafb7.png" alt="1"></p>
+<p><img src="https://i.loli.net/2018/11/01/5bdac5205aab4.png" alt="2"></p>
+<h3 id="2-执行命令"><a href="#2-执行命令" class="headerlink" title="2.执行命令"></a>2.执行命令</h3><p><strong>1.</strong>我们先执行一个ipconfig 这个命令是查看自己的的ip。</p>
+<p>![1]<a href="https://i.loli.net/2018/11/01/5bdac728cc302.png" target="_blank" rel="external">https://i.loli.net/2018/11/01/5bdac728cc302.png</a></p>
+<p><strong>2.</strong>我们在输入winver看看自己Windows的版本。</p>
+<p><img src="https://i.loli.net/2018/11/01/5bdac8e55558c.png" alt="1"></p>
+<h3 id="3-cmd命令大全"><a href="#3-cmd命令大全" class="headerlink" title="3.cmd命令大全"></a>3.cmd命令大全</h3><p>我这边给大家列出100个cmd命令。</p>
+<pre><code class="bash">
+
+　　1. gpedit.msc-----组策略
+
+
+　　2. sndrec32-------录音机
+
+
+　　3. Nslookup-------IP地址侦测器 ，是一个 监测网络中 DNS 服务器是否能正确实现域名解析的命令行工具。 它在 Windows NT/2000/XP 中均可使用 , 但在 Windows 98 中却没有集成这一个工具
+
+
+　　4. explorer-------打开资源管理器 
+
+
+　　5. logoff---------注销命令
+
+
+　　6. shutdown-------60秒倒计时关机命令
+
+
+　　7. lusrmgr.msc----本机用户和组
+
+
+　　8. services.msc---本地服务设置
+
+
+　　9. oobe/msoobe /a----检查XP是否激活
+
+
+　　10. notepad--------打开记事本 
+
+
+　　11. cleanmgr-------垃圾整理
+
+
+　　12. net start messenger----开始信使服务
+
+
+　　13. compmgmt.msc---计算机管理
+
+
+　　14. net stop messenger-----停止信使服务
+
+
+　　15. conf-----------启动netmeeting
+
+
+　　16. dvdplay--------DVD播放器
+
+
+　　17. charmap--------启动字符映射表
+
+
+　　18. diskmgmt.msc---磁盘管理实用程序
+
+
+　　19. calc-----------启动计算器
+
+
+　　20. dfrg.msc-------磁盘碎片整理程序
+
+
+　　21. chkdsk.exe-----Chkdsk磁盘检查
+
+
+　　22. devmgmt.msc--- 设备管理器 
+
+
+　　23. regsvr32 /u *.dll----停止dll文件运行
+
+
+　　24. drwtsn32------ 系统医生
+
+
+　　25. rononce -p----15秒关机
+
+
+　　26. dxdiag---------检查DirectX信息
+
+
+　　27. regedt32-------注册表编辑器 
+
+
+　　28. Msconfig.exe---系统配置实用程序
+
+
+　　29. rsop.msc-------组策略结果集
+
+
+　　30. mem.exe--------显示内存使用情况
+
+
+　　31. regedit.exe----注册表
+
+
+　　32. winchat--------XP自带局域网聊天
+
+
+　　33. progman--------程序管理器
+
+
+　　34. winmsd---------系统信息
+
+
+　　35. perfmon.msc----计算机性能监测程序
+
+
+　　36. winver---------检查Windows版本
+
+
+　　37. sfc /scannow-----扫描错误并复原
+
+
+　　38. taskmgr-----任务管理器（2000/xp/2003
+
+
+　　39. winver---------检查Windows版本
+
+
+　　40. wmimgmt.msc----打开windows管理体系结构(WMI)
+
+
+　　41. wupdmgr--------windows更新程序
+
+
+　　42. wscript--------windows脚本宿主设置
+
+
+　　43. write----------写字板
+
+
+　　44. winmsd---------系统信息
+
+
+　　45. wiaacmgr-------扫描仪和照相机向导
+
+
+　　46. winchat--------XP自带局域网聊天
+
+
+　　47. mem.exe--------显示内存使用情况
+
+
+　　48. Msconfig.exe---系统配置实用程序
+
+
+　　49. mplayer2-------简易widnows media player
+
+
+　　50. mspaint--------画图板
+
+
+　　51. mstsc----------远程桌面连接
+
+
+　　52. mplayer2-------媒体播放机
+
+
+　　53. magnify--------放大镜实用程序
+
+
+　　54. mmc------------打开控制台
+
+
+　　55. mobsync--------同步命令
+
+
+　　56. dxdiag---------检查DirectX信息
+
+
+　　57. iexpress-------木马捆绑工具，系统自带 58. fsmgmt.msc-----共享文件夹管理器
+
+
+　　59. utilman--------辅助工具管理器
+
+
+　　60. diskmgmt.msc---磁盘管理实用程序
+
+
+　　61. dcomcnfg-------打开系统组件服务
+
+
+　　62. ddeshare-------打开DDE共享设置
+
+
+　　110. osk------------打开屏幕键盘 
+
+
+　　111. odbcad32-------ODBC数据源管理器
+
+
+　　112. oobe/msoobe /a----检查XP是否激活 114. logoff---------注销命令
+
+
+　　66. notepad--------打开记事本
+
+
+　　67. nslookup-------网络管理的工具向导
+
+
+　　68. ntbackup-------系统备份和还原
+
+
+　　69. narrator-------屏幕“讲述人”
+
+
+　　70. ntmsmgr.msc----移动存储管理器
+
+
+　　71. ntmsoprq.msc---移动存储管理员操作请求
+
+
+　　72. netstat -an----(TC)命令检查接口
+
+
+　　73. syncapp--------创建一个公文包
+
+
+　　74. sysedit--------系统配置编辑器
+
+
+　　75. sigverif-------文件签名验证程序
+
+
+　　76. ciadv.msc------索引服务程序
+
+
+　　77. shrpubw--------创建共享文件夹
+
+
+　　78. secpol.msc-----本地安全策略
+
+
+　　79. syskey---------系统加密，一旦加密就不能解开，保护windows xp系统的双重密码
+
+
+　　80. services.msc---本地服务设置
+
+
+　　81. Sndvol32-------音量控制程序
+
+
+　　82. sfc.exe--------系统文件检查器
+
+
+　　83. sfc /scannow---windows文件保护
+
+
+　　84. ciadv.msc------索引服务程序
+
+
+　　85. tourstart------xp简介（安装完成后出现的漫游xp程序）
+
+
+　　86. taskmgr--------任务管理器
+
+
+　　87. eventvwr-------事件查看器
+
+
+　　88. eudcedit-------造字程序
+
+
+　　89. compmgmt.msc---计算机管理
+
+
+　　90. packager-------对象包装程序
+
+
+　　91. perfmon.msc----计算机性能监测程序
+
+
+　　92. charmap--------启动字符映射表
+
+
+　　93. cliconfg-------SQL SERVER 客户端网络实用程序
+
+
+　　94. Clipbrd--------剪贴板查看器
+
+
+　　95. conf-----------启动netmeeting
+
+
+　　96. certmgr.msc----证书管理实用程序
+
+
+　　97. regsvr32 /u *.dll----停止dll文件运行
+
+
+　　98. regsvr32 /u zipfldr.dll------取消ZIP支持
+
+
+　　99. cmd.exe--------CMD命令提示符
+
+
+　　100. chkdsk.exe-----Chkdsk磁盘检查
+</code></pre>
 
             </div>
             <hr/>
@@ -413,7 +689,7 @@
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="mo3.top" class="b-link-green">JunMo的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/10/26/nmap安装/" class="b-link-green">nmap的安装以及使用</a>
+                    <a href="/2018/11/01/Windows常用命令/" class="b-link-green">Windows常用命令</a>
                 </p>
             </div>
         </div>
@@ -432,44 +708,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">Previous</div>
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">Current</div>
             <div class="card">
-                <a href="/2018/10/27/nmap进阶使用/">
+                <a href="/2018/11/01/Windows常用命令/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2018/10/27/5bd46b61d71d6.jpeg" class="responsive-img" alt="nmap进阶使用">
+                        <img src="https://i.loli.net/2018/11/01/5bdaca2c2699f.jpg" class="responsive-img" alt="Windows常用命令">
                         
-                        <span class="card-title">nmap进阶使用</span>
+                        <span class="card-title">Windows常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">本章介绍的是端口扫描工具nmap,我们已经在第一章学会了安装现在来教大家其他的进阶用法。
-
-
-1、指定目标1. 192.168.1.0/24 扫描整个网段 0./24 代表0-255
-2. 指定范围 192.168.1.1-255 192.</div>
+                    <div class="summary">大家都熟悉windows图形操作界面，其实windows还有一套cmd命令同样可以实现基本的操作，知道一些常用的命令
+对我们使用计算机也有好处。
+1.打开cmd首先，打开cmd命令，windows窗口键(键盘上4个方块的键)+R,打开运行，</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/渗透工具/" class="post-category" target="_blank">
-                                    渗透工具
+                            <a href="/categories/Windows/" class="post-category" target="_blank">
+                                    Windows
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nmap/" target="_blank">
-                        <span class="chip bg-color">nmap</span>
+                    <a href="/tags/Windows/" target="_blank">
+                        <span class="chip bg-color">Windows</span>
                     </a>
                     
                 </div>
@@ -479,47 +754,41 @@
         
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">Current</div>
+            <div class="article-badge right-badge text-color">Next</div>
             <div class="card">
-                <a href="/2018/10/26/nmap安装/">
+                <a href="/2018/10/29/linux常用命令/">
                     <div class="card-image">
                         
-                        <img src="https://i.loli.net/2018/10/27/5bd46b61d71d6.jpeg" class="responsive-img" alt="nmap的安装以及使用">
+                        <img src="https://i.loli.net/2018/10/29/5bd711d5af952.jpg" class="responsive-img" alt="linux常用命令">
                         
-                        <span class="card-title">nmap的安装以及使用</span>
+                        <span class="card-title">linux常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">本章介绍的是端口扫描工具nmap,用来扫描网上电脑开放的网络连接端。具体功能是确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统。它是网络管理员必用的软件之一，以及用以评估网络系统安全。
+                    <div class="summary">玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼
 
-
-1.安装nmapnmap官网地址：ht</div>
+因为我们只需要掌握我们最常用的命令就可以了。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-26
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/渗透工具/" class="post-category" target="_blank">
-                                    渗透工具
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/应用安装/" target="_blank">
-                        <span class="chip bg-color">应用安装</span>
-                    </a>
-                    
-                    <a href="/tags/nmap/" target="_blank">
-                        <span class="chip bg-color">nmap</span>
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
