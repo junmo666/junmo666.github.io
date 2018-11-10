@@ -5,10 +5,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="黑客系统kali linux安装, JunMo的博客">
-    <meta name="description" content="kali是linux其中一个发行版，基于Debian，前身是BackTrack（简称BT系统）。kali系统内置大量渗透测试软件，
+    <meta name="keywords" content="nmap的安装以及使用, JunMo的博客">
+    <meta name="description" content="本章介绍的是端口扫描工具nmap,用来扫描网上电脑开放的网络连接端。具体功能是确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统。它是网络管理员必用的软件之一，以及用以评估网络系统安全。
 
-黑客工具箱已不足以形容它，可以说是巨大的渗透系统，涵盖了多个领域，如无线网络、数字取证、服务器、密码、系统">
+1.安装nmapnmap官网地址：htt">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>黑客系统kali linux安装 | JunMo的博客</title>
+    <title>nmap的安装以及使用 | JunMo的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -191,13 +191,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/11/10/5be69e4c178a4.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/10/27/5bd46b61d71d6.jpeg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        黑客系统kali linux安装
+                        nmap的安装以及使用
                     </div>
                 </div>
             </div>
@@ -217,12 +217,12 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/kali/" target="_blank">
-                    <span class="chip bg-color">kali</span>
+                <a href="/tags/nmap/" target="_blank">
+                    <span class="chip bg-color">nmap</span>
                 </a>
                 
-                <a href="/tags/linux/" target="_blank">
-                    <span class="chip bg-color">linux</span>
+                <a href="/tags/应用安装/" target="_blank">
+                    <span class="chip bg-color">应用安装</span>
                 </a>
                 
             </div>
@@ -232,8 +232,8 @@
                 <span class="post-cate">
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/Linux/" class="post-category" target="_blank">
-                        Linux
+                    <a href="/categories/渗透工具/" class="post-category" target="_blank">
+                        渗透工具
                     </a>
                     
                 </span>
@@ -247,79 +247,32 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>kali是linux其中一个发行版，基于Debian，前身是BackTrack（简称BT系统）。kali系统内置大量渗透测试软件，</p>
+                <p>本章介绍的是端口扫描工具nmap,用来扫描网上电脑开放的网络连接端。具体功能是确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统。它是网络管理员必用的软件之一，以及用以评估网络系统安全。</p>
 <a id="more"></a>
-<p>黑客工具箱已不足以形容它，可以说是巨大的渗透系统，涵盖了多个领域，如无线网络、数字取证、服务器、密码、系统漏洞等等，知名软件有：wireshark、aircrack-ng、nmap、hashcat、metasploit-framework(msf)。</p>
-<h3 id="1、虚拟机软安装与配置"><a href="#1、虚拟机软安装与配置" class="headerlink" title="1、虚拟机软安装与配置"></a>1、虚拟机软安装与配置</h3><p>安装虚拟机我已经在前面几篇文章介绍了,没安装的可以去前面的文章看一下。</p>
-<p><strong>1.</strong> 安装完成，然后新建虚拟机： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be6358c9a955.png" alt="1"></p>
-<p><strong>2.</strong>选择推荐的即可：</p>
-<p><img src="https://i.loli.net/2018/11/10/5be635b6635cb.jpg" alt="2"></p>
-<p><strong>3.</strong>这里选择安装程序映像文件，浏览选择刚才下载的kali linux文件，后缀是 .iso： </p>
-<p>kali 镜像可以去<a href="https://www.kali.org/" target="_blank" rel="external">https://www.kali.org/</a> 官网下载</p>
-<p>我这里提供一个64位的下载地址 <a href="https://pan.baidu.com/s/1g1e2iubvpd0wWtAilFdtsw" target="_blank" rel="external">https://pan.baidu.com/s/1g1e2iubvpd0wWtAilFdtsw</a></p>
-<p><img src="https://i.loli.net/2018/11/10/5be636142c00d.jpg" alt="3.jpg"></p>
-<p><strong>4.</strong>选择操作系统“linux”，版本是“Debian”：</p>
-<p><img src="https://i.loli.net/2018/11/10/5be6367b969bb.jpg" alt="4.jpg"></p>
-<p><strong>5</strong>名称随便取，然后选择虚拟机文件存放位置： <strong>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</strong></p>
-<p><img src="https://i.loli.net/2018/11/10/5be63740bf5bc.jpg" alt="5.jpg"></p>
-<p><strong>6.</strong>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be637eb7453d.jpg" alt="6.jpg"></p>
-<p><strong>7.</strong>新建完成，硬件可以之后自定义： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63823a62ea.jpg" alt="7.jpg"></p>
-<p><strong>8.</strong>觉得默认配置不合适可以自定义调整，例如修改内存大小，增加磁盘： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be6388687d8a.jpg" alt="8.jpg"></p>
-<p><strong>9.</strong>设置网络适配器模式，可以桥接物理网络（例如电脑连接wifi，虚拟机就和电脑连接同一个wifi），或者NAT模式（类似于电脑成为一个路由器，虚拟机连接电脑的热点），如果不想联网，只用于物理机和虚拟机之间的交流，可以选择主机模式： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be639a9473a6.jpg" alt="9.jpg"></p>
-<p>虚拟机配置完成，接下来开始安装 kali 系统。</p>
-<h3 id="2、Kali系统安装与配置"><a href="#2、Kali系统安装与配置" class="headerlink" title="2、Kali系统安装与配置"></a>2、Kali系统安装与配置</h3><p><strong>1.</strong>点击启动虚拟机： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63a2c45283.jpg" alt="10.jpg"></p>
-<p><strong>2.</strong>鼠标点击安装界面，之后用键盘方向键和Enter键操作： <strong>Live</strong> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br>这里我们选择简单的图形化安装 <strong>Graphical install </strong><br>此时鼠标无法操作，退出虚拟机操作界面使用 <strong> ctrl + alt </strong> 键。</p>
-<p><img src="https://i.loli.net/2018/11/10/5be63ab2aa17b.jpg" alt="11.jpg"></p>
-<p><strong>3.</strong>选择简体中文： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63afe1220a.jpg" alt="12.jpg"></p>
-<p><img src="https://i.loli.net/2018/11/10/5be63b642474f.jpg" alt="13.jpg"></p>
-<p><img src="https://i.loli.net/2018/11/10/5be63b8aa03ea.jpg" alt="14.jpg"></p>
-<p><strong>3.</strong> 等待配置一会： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63bc63ed8c.jpg" alt="15.jpg"></p>
-<p><strong>4.</strong>设置主机名称，和Windows的主机名一样： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63c2076330.jpg" alt="16.jpg"></p>
-<p><strong>5.</strong>可以暂时不用输入： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63c486eb1c.jpg" alt="17.jpg"></p>
-<p><strong>6</strong> 设置用户密码登录： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63f8f9ea06.jpg" alt="33.jpg"></p>
-<p><strong>7.</strong>等待配置： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63c84f3252.jpg" alt="18.jpg"></p>
-<p><strong>8.</strong>可以选择使用整个磁盘： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63cb22ea77.jpg" alt="19.jpg"></p>
-<p><img src="https://i.loli.net/2018/11/10/5be63ce1c5fd9.jpg" alt="20.jpg"></p>
-<p>可以使用推荐的：<br><img src="https://i.loli.net/2018/11/10/5be63d0fb0fec.jpg" alt="21.jpg"></p>
-<p><strong>9.</strong>确定分配，或者更改区块大小和新增区块： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63d3b7df1e.jpg" alt="22.jpg"></p>
-<p>确认写入： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63d6f8b14d.jpg" alt="23.jpg"></p>
-<p><strong>10.</strong>接下来安装时间有点长，喝杯茶休息一下 -_- </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63db3afed0.jpg" alt="24.jpg"></p>
-<p><strong>11</strong> 终于安装完成，半小时安静的过去了……  这里选择不使用网络镜像： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63de60912b.jpg" alt="25.jpg"></p>
-<p><strong>12</strong> 配置GRUB： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63e099e1e4.jpg" alt="26.jpg"></p>
-<p><img src="https://i.loli.net/2018/11/10/5be63e2e6ee81.jpg" alt="27.jpg"></p>
-<p><strong>13</strong>安装完成： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63e829d30e.jpg" alt="28.jpg"></p>
-<p><img src="https://i.loli.net/2018/11/10/5be63e96e6e2e.jpg" alt="29.jpg"></p>
-<p><strong>14</strong>选择启动，第二个选项是恢复模式： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63ec93db6e.jpg" alt="30.jpg"></p>
-<p><strong>15</strong>初始用户名是 root： </p>
-<p><img src="https://i.loli.net/2018/11/10/5be63eeed4908.jpg" alt="31.jpg"></p>
-<p><strong>16</strong>之前设置的密码：</p>
-<p><img src="https://i.loli.net/2018/11/10/5be63f21ab2f6.jpg" alt="32.jpg"> </p>
-<p>到此kali系统就安装完毕了：</p>
-<p><img src="https://i.loli.net/2018/11/10/5be63ffb10c8a.jpg" alt="34.jpg"></p>
-<p>改编转载自:</p>
-<blockquote>
-<p>blog.csdn.net/KNIGH_YUN<br>/article/details/79949512#2</p>
-</blockquote>
+<h3 id="1-安装nmap"><a href="#1-安装nmap" class="headerlink" title="1.安装nmap"></a>1.安装nmap</h3><p>nmap官网地址：<a href="https://nmap.org/" target="_blank" rel="external">https://nmap.org/</a>  </p>
+<p>Linux:在Linux终端上运行如下命令：apt-get install nmap</p>
+<p><img src="https://i.loli.net/2018/10/26/5bd319c20d9e2.png" alt="下载图片"></p>
+<p><a href="https://nmap.org/download.html#windows" target="_blank" rel="external">Windows版本下载地址点我</a>  </p>
+<h3 id="2-入门扫描"><a href="#2-入门扫描" class="headerlink" title="2.入门扫描"></a>2.入门扫描</h3><p>Windows 打开cmd窗口</p>
+<p>linux  打开终端即可</p>
+<p>在cmd窗口里面输入 <strong>nmap ip地址</strong></p>
+<p>我们除了可以直接扫描IP，也可以扫描网站</p>
+<p><img src="https://i.loli.net/2018/10/26/5bd31eca31b6a.png" alt="nmap baidu"></p>
+<p><strong>nmap www.baidu.com</strong></p>
+<p>这里我们用百度做示范，扫描了百度的开放端口，也是使用了<strong>nmap &lt;目标主机&gt;</strong>的扫描语句</p>
+<h3 id="3-Nmap扫描多个IP-主机"><a href="#3-Nmap扫描多个IP-主机" class="headerlink" title="3.Nmap扫描多个IP/主机"></a>3.Nmap扫描多个IP/主机</h3><p><strong>nmap 192.168.1.1 192.168.1.2</strong></p>
+<p><img src="https://i.loli.net/2018/10/26/5bd32474a6d51.png" alt="nmap 192 1 2"></p>
+<p>如上，这里我们扫描了 192.168.1.1与192.168.1.2这两个IP</p>
+<p>我们要将扫描的主机用空格隔开，比如<strong>nmap 192.168.1.1&lt;空格&gt;192.168.1.100</strong>，这样就可以扫描192.168.1.1和192.168.1.2两台主机的信息了</p>
+<h3 id="4-扫描一个网段的主机信息"><a href="#4-扫描一个网段的主机信息" class="headerlink" title="4.扫描一个网段的主机信息"></a>4.扫描一个网段的主机信息</h3><p><strong>nmap 192.168.0/24</strong></p>
+<p>我们只需要更改一下搜索的目标就可以扫描，这里扫描了192.168.1.0-255这一整个网段，利用的指令还是<strong>nmap 192.168.1.0/24</strong></p>
+<p><img src="https://i.loli.net/2018/10/26/5bd3251aa4a91.png" alt="nmap 0/24"></p>
+<p>这里需要注意的是，扫描一整个网段需要的时间较长，<strong>如果想要查看扫描进度可以在终端中按下Tab键便可以查看扫描进度</strong></p>
+<h3 id="5-描某个范围内的存活主机"><a href="#5-描某个范围内的存活主机" class="headerlink" title="5.描某个范围内的存活主机"></a>5.描某个范围内的存活主机</h3><p><strong>nmap 192.168.1.1-100</strong></p>
+<p><img src="https://i.loli.net/2018/10/26/5bd325a5aadcc.png" alt="nmap 1-100"></p>
+<p>这里我们使用了nmap 192.168.1.1-100的指令，意思是扫描192.168.1.1到192.168.1.200这一IP段中存活的主机，我们只需要将搜索目标的IP增加范围即可</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p><strong>在我们的Nmap扫描教程第一节中，我们学习了如何扫描单个主机/多个主机/整个网段以及某个IP段的存活主机信息</strong></p>
+<p><strong>但是Nmap中还有许多有趣的扫描方式，这里我们暂且不提，在下一节的教程中，我们将学习不同协议的扫描方式</strong></p>
 
             </div>
             <hr/>
@@ -458,7 +411,7 @@
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="mo3.top" class="b-link-green">JunMo的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/11/10/kali安装/" class="b-link-green">黑客系统kali linux安装</a>
+                    <a href="/2018/11/10/nmap安装/" class="b-link-green">nmap的安装以及使用</a>
                 </p>
             </div>
         </div>
@@ -480,6 +433,52 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">Previous</div>
             <div class="card">
+                <a href="/2018/11/10/nmap进阶使用/">
+                    <div class="card-image">
+                        
+                        <img src="https://i.loli.net/2018/10/27/5bd46b61d71d6.jpeg" class="responsive-img" alt="nmap进阶使用">
+                        
+                        <span class="card-title">nmap进阶使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">本章介绍的是端口扫描工具nmap,我们已经在第一章学会了安装现在来教大家其他的进阶用法。
+
+
+1、指定目标1. 192.168.1.0/24 扫描整个网段 0./24 代表0-255
+2. 指定范围 192.168.1.1-255 192.</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/渗透工具/" class="post-category" target="_blank">
+                                    渗透工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/nmap/" target="_blank">
+                        <span class="chip bg-color">nmap</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">Next</div>
+            <div class="card">
                 <a href="/2018/11/10/linux常用命令/">
                     <div class="card-image">
                         
@@ -493,9 +492,9 @@
 
 因为我们只需要掌握我们最常用的命令就可以了。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -513,55 +512,6 @@
                     
                     <a href="/tags/Linux/" target="_blank">
                         <span class="chip bg-color">Linux</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">Next</div>
-            <div class="card">
-                <a href="/2018/10/28/虚拟机软件安装/">
-                    <div class="card-image">
-                        
-                        <img src="https://i.loli.net/2018/10/28/5bd55503c16d0.jpg" class="responsive-img" alt="VMWare虚拟机软件安装">
-                        
-                        <span class="card-title">VMWare虚拟机软件安装</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">VMWare (Virtual Machine ware)是一个“虚拟PC”软件公司.它的产品可以使你在一台机器上同时运行二个或更多Windows
-
-DOS、LINUX系统。与“多启动”系统相比，VMWare采用了完全不同的概念。
-多启动系</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/虚拟机/" class="post-category" target="_blank">
-                                    虚拟机
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/应用安装/" target="_blank">
-                        <span class="chip bg-color">应用安装</span>
-                    </a>
-                    
-                    <a href="/tags/虚拟机/" target="_blank">
-                        <span class="chip bg-color">虚拟机</span>
                     </a>
                     
                 </div>
