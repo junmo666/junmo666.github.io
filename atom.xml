@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="mo3.top/"/>
-  <updated>2018-11-01T10:56:35.390Z</updated>
+  <updated>2018-11-10T09:01:09.021Z</updated>
   <id>mo3.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑客系统kali linux安装</title>
+    <link href="mo3.top/2018/11/10/kali%E5%AE%89%E8%A3%85/"/>
+    <id>mo3.top/2018/11/10/kali安装/</id>
+    <published>2018-11-10T08:51:57.000Z</published>
+    <updated>2018-11-10T09:01:09.021Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;kali是linux其中一个发行版，基于Debian，前身是BackTrack（简称BT系统）。kali系统内置大量渗透测试软件，&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="mo3.top/categories/Linux/"/>
+    
+    
+      <category term="kali" scheme="mo3.top/tags/kali/"/>
+    
+      <category term="linux" scheme="mo3.top/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows常用命令</title>
@@ -72,9 +94,9 @@
       <category term="虚拟机" scheme="mo3.top/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
     
-      <category term="虚拟机" scheme="mo3.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
       <category term="应用安装" scheme="mo3.top/tags/%E5%BA%94%E7%94%A8%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="虚拟机" scheme="mo3.top/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
   </entry>
   
