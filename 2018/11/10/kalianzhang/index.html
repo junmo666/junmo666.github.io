@@ -1,0 +1,635 @@
+<!DOCTYPE HTML>
+<html lang="null">
+<head>
+    
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="黑客系统kali linux安装, JunMo的博客">
+    <meta name="description" content="kali是linux其中一个发行版，基于Debian，前身是BackTrack（简称BT系统）。kali系统内置大量渗透测试软件，
+
+黑客工具箱已不足以形容它，可以说是巨大的渗透系统，涵盖了多个领域，如无线网络、数字取证、服务器、密码、系统">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>黑客系统kali linux安装 | JunMo的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+</head>
+
+</head>
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <img src="/medias/logo.png" class="logo-img hide-on-small-only">
+                        
+                        <span class="logo-span">JunMo的博客</span>
+                    </a>
+                </div>
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>主页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>类别</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>文章</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li>
+        <a id="toggleSearch" class="waves-effect waves-light">
+            <i id="searchIcon" class="mdi-action-search"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div class="side-nav" id="mobile-nav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">JunMo的博客</div>
+        <div class="logo-desc">
+            
+            一个分享网络技术的博客!
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                主页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                类别
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                文章
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <div class="social-link"><a href="https://github.com/junmo666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="mailto:89520475@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="http://wpa.qq.com/msgrd?v=3&uin=89520475&site=qq&menu=yes" class="tooltipped" data-tooltip="QQ联系我: 89520475" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/" class="tooltipped" target="_blank" data-tooltip="无" data-position="top" data-delay="50">
+   <i class="fa fa-rss"></i>
+</a>
+</div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </nav>
+</header>
+
+
+
+<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/11/10/5be69e4c178a4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        黑客系统kali linux安装
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            
+            <div class="article-tag">
+                
+                <a href="/tags/kali/" target="_blank">
+                    <span class="chip bg-color">kali</span>
+                </a>
+                
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
+                </a>
+                
+            </div>
+            
+            <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Linux/" class="post-category" target="_blank">
+                        Linux
+                    </a>
+                    
+                </span>
+                
+
+                <span class="post-date">
+                    <i class="fa fa-clock-o fa-fw"></i>2018-11-10
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>kali是linux其中一个发行版，基于Debian，前身是BackTrack（简称BT系统）。kali系统内置大量渗透测试软件，</p>
+<a id="more"></a>
+<p>黑客工具箱已不足以形容它，可以说是巨大的渗透系统，涵盖了多个领域，如无线网络、数字取证、服务器、密码、系统漏洞等等，知名软件有：wireshark、aircrack-ng、nmap、hashcat、metasploit-framework(msf)。</p>
+<h3 id="1、虚拟机软安装与配置"><a href="#1、虚拟机软安装与配置" class="headerlink" title="1、虚拟机软安装与配置"></a>1、虚拟机软安装与配置</h3><p>安装虚拟机我已经在前面几篇文章介绍了,没安装的可以去前面的文章看一下。</p>
+<p><strong>1.</strong> 安装完成，然后新建虚拟机： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be6358c9a955.png" alt="1"></p>
+<p><strong>2.</strong>选择推荐的即可：</p>
+<p><img src="https://i.loli.net/2018/11/10/5be635b6635cb.jpg" alt="2"></p>
+<p><strong>3.</strong>这里选择安装程序映像文件，浏览选择刚才下载的kali linux文件，后缀是 .iso： </p>
+<p>kali 镜像可以去<a href="https://www.kali.org/" target="_blank" rel="external">https://www.kali.org/</a> 官网下载</p>
+<p>我这里提供一个64位的下载地址 <a href="https://pan.baidu.com/s/1g1e2iubvpd0wWtAilFdtsw" target="_blank" rel="external">https://pan.baidu.com/s/1g1e2iubvpd0wWtAilFdtsw</a></p>
+<p><img src="https://i.loli.net/2018/11/10/5be636142c00d.jpg" alt="3.jpg"></p>
+<p><strong>4.</strong>选择操作系统“linux”，版本是“Debian”：</p>
+<p><img src="https://i.loli.net/2018/11/10/5be6367b969bb.jpg" alt="4.jpg"></p>
+<p><strong>5</strong>名称随便取，然后选择虚拟机文件存放位置： <strong>注意选择合适位置，这里需要存放几十G的虚拟磁盘文件</strong></p>
+<p><img src="https://i.loli.net/2018/11/10/5be63740bf5bc.jpg" alt="5.jpg"></p>
+<p><strong>6.</strong>设置虚拟磁盘的大小，一般不能低于默认值，下面一般选择单个文件，方便： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be637eb7453d.jpg" alt="6.jpg"></p>
+<p><strong>7.</strong>新建完成，硬件可以之后自定义： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63823a62ea.jpg" alt="7.jpg"></p>
+<p><strong>8.</strong>觉得默认配置不合适可以自定义调整，例如修改内存大小，增加磁盘： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be6388687d8a.jpg" alt="8.jpg"></p>
+<p><strong>9.</strong>设置网络适配器模式，可以桥接物理网络（例如电脑连接wifi，虚拟机就和电脑连接同一个wifi），或者NAT模式（类似于电脑成为一个路由器，虚拟机连接电脑的热点），如果不想联网，只用于物理机和虚拟机之间的交流，可以选择主机模式： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be639a9473a6.jpg" alt="9.jpg"></p>
+<p>虚拟机配置完成，接下来开始安装 kali 系统。</p>
+<h3 id="2、Kali系统安装与配置"><a href="#2、Kali系统安装与配置" class="headerlink" title="2、Kali系统安装与配置"></a>2、Kali系统安装与配置</h3><p><strong>1.</strong>点击启动虚拟机： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63a2c45283.jpg" alt="10.jpg"></p>
+<p><strong>2.</strong>鼠标点击安装界面，之后用键盘方向键和Enter键操作： <strong>Live</strong> 开头的不是系统安装，类似于Windows PE，用于恢复系统，其他选项可以不用管，也暂时用不着。<br>这里我们选择简单的图形化安装 <strong>Graphical install </strong><br>此时鼠标无法操作，退出虚拟机操作界面使用 <strong> ctrl + alt </strong> 键。</p>
+<p><img src="https://i.loli.net/2018/11/10/5be63ab2aa17b.jpg" alt="11.jpg"></p>
+<p><strong>3.</strong>选择简体中文： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63afe1220a.jpg" alt="12.jpg"></p>
+<p><img src="https://i.loli.net/2018/11/10/5be63b642474f.jpg" alt="13.jpg"></p>
+<p><img src="https://i.loli.net/2018/11/10/5be63b8aa03ea.jpg" alt="14.jpg"></p>
+<p><strong>3.</strong> 等待配置一会： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63bc63ed8c.jpg" alt="15.jpg"></p>
+<p><strong>4.</strong>设置主机名称，和Windows的主机名一样： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63c2076330.jpg" alt="16.jpg"></p>
+<p><strong>5.</strong>可以暂时不用输入： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63c486eb1c.jpg" alt="17.jpg"></p>
+<p><strong>6</strong> 设置用户密码登录： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63f8f9ea06.jpg" alt="33.jpg"></p>
+<p><strong>7.</strong>等待配置： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63c84f3252.jpg" alt="18.jpg"></p>
+<p><strong>8.</strong>可以选择使用整个磁盘： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63cb22ea77.jpg" alt="19.jpg"></p>
+<p><img src="https://i.loli.net/2018/11/10/5be63ce1c5fd9.jpg" alt="20.jpg"></p>
+<p>可以使用推荐的：<br><img src="https://i.loli.net/2018/11/10/5be63d0fb0fec.jpg" alt="21.jpg"></p>
+<p><strong>9.</strong>确定分配，或者更改区块大小和新增区块： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63d3b7df1e.jpg" alt="22.jpg"></p>
+<p>确认写入： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63d6f8b14d.jpg" alt="23.jpg"></p>
+<p><strong>10.</strong>接下来安装时间有点长，喝杯茶休息一下 -_- </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63db3afed0.jpg" alt="24.jpg"></p>
+<p><strong>11</strong> 终于安装完成，半小时安静的过去了……  这里选择不使用网络镜像： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63de60912b.jpg" alt="25.jpg"></p>
+<p><strong>12</strong> 配置GRUB： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63e099e1e4.jpg" alt="26.jpg"></p>
+<p><img src="https://i.loli.net/2018/11/10/5be63e2e6ee81.jpg" alt="27.jpg"></p>
+<p><strong>13</strong>安装完成： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63e829d30e.jpg" alt="28.jpg"></p>
+<p><img src="https://i.loli.net/2018/11/10/5be63e96e6e2e.jpg" alt="29.jpg"></p>
+<p><strong>14</strong>选择启动，第二个选项是恢复模式： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63ec93db6e.jpg" alt="30.jpg"></p>
+<p><strong>15</strong>初始用户名是 root： </p>
+<p><img src="https://i.loli.net/2018/11/10/5be63eeed4908.jpg" alt="31.jpg"></p>
+<p><strong>16</strong>之前设置的密码：</p>
+<p><img src="https://i.loli.net/2018/11/10/5be63f21ab2f6.jpg" alt="32.jpg"> </p>
+<p>到此kali系统就安装完毕了：</p>
+<p><img src="https://i.loli.net/2018/11/10/5be63ffb10c8a.jpg" alt="34.jpg"></p>
+<p>改编转载自:</p>
+<blockquote>
+<p>blog.csdn.net/KNIGH_YUN<br>/article/details/79949512#2</p>
+</blockquote>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff;
+        background-color: #22AB38;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff;
+        background-color: #019FE8;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs">
+                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
+                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                    </ul>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#reward .reward-link').on('click', function () {
+            $('#rewardModal').openModal();
+        });
+
+        $('#rewardModal .close').on('click', function () {
+            $('#rewardModal').closeModal();
+        });
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone, qq, weibo, douban"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">Reprint please specify: </span>
+                    <a href="mo3.top" class="b-link-green">JunMo的博客</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2018/11/10/kalianzhang/" class="b-link-green">黑客系统kali linux安装</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">Previous</div>
+            <div class="card">
+                <a href="/2018/11/10/linuxmingling/">
+                    <div class="card-image">
+                        
+                        <img src="https://i.loli.net/2018/10/29/5bd711d5af952.jpg" class="responsive-img" alt="linux常用命令">
+                        
+                        <span class="card-title">linux常用命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">玩过Linux的人都会知道，Linux中的命令的确是非常多，但是玩过Linux的人也从来不会因为Linux的命令如此之多而烦恼
+
+因为我们只需要掌握我们最常用的命令就可以了。然而每个人玩Linux的目的都不同，所以他们常用的命令也就差异非常</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">Next</div>
+            <div class="card">
+                <a href="/2018/10/28/xunijianzhuang/">
+                    <div class="card-image">
+                        
+                        <img src="https://i.loli.net/2018/10/28/5bd55503c16d0.jpg" class="responsive-img" alt="VMWare虚拟机软件安装">
+                        
+                        <span class="card-title">VMWare虚拟机软件安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">VMWare (Virtual Machine ware)是一个“虚拟PC”软件公司.它的产品可以使你在一台机器上同时运行二个或更多Windows
+
+DOS、LINUX系统。与“多启动”系统相比，VMWare采用了完全不同的概念。
+多启动系</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/虚拟机/" class="post-category" target="_blank">
+                                    虚拟机
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/应用安装/" target="_blank">
+                        <span class="chip bg-color">应用安装</span>
+                    </a>
+                    
+                    <a href="/tags/虚拟机/" target="_blank">
+                        <span class="chip bg-color">虚拟机</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+    
+
+</main>
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275202361'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1275202361%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+        </div>
+        <div class="col s12 m4 l4 social-link"><a href="https://github.com/junmo666" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <i class="fa fa-github"></i>
+</a>
+<a href="mailto:89520475@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <i class="fa fa-envelope-open"></i>
+</a>
+<a href="http://wpa.qq.com/msgrd?v=3&uin=89520475&site=qq&menu=yes" class="tooltipped" data-tooltip="QQ联系我: 89520475" data-position="top" data-delay="50">
+    <i class="fa fa-qq"></i>
+</a>
+
+<a href="/" class="tooltipped" target="_blank" data-tooltip="无" data-position="top" data-delay="50">
+   <i class="fa fa-rss"></i>
+</a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title">Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input" autofocus="">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/js/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+</body>
+</html>
