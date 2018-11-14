@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>局域网DNS劫持</title>
+      <link href="/2018/11/14/dnsjiechi/"/>
+      <url>/2018/11/14/dnsjiechi/</url>
+      
+        <content type="html"><![CDATA[<p>DNS劫持又称域名劫持，是指在劫持的网络范围内拦截域名解析的请求<br>局域网劫持, 攻击者通过伪装成网关, 劫持受害者的网络请求, 将网络请求拦截到指定的服务器</p><h3 id="1、试验环境。"><a href="#1、试验环境。" class="headerlink" title="1、试验环境。"></a>1、试验环境。</h3><blockquote><p>攻击者Kali系统 IP；192.168.0.124<br>受害者win10系统 IP:192.168.0.9</p></blockquote><h3 id="2、打开本地服务器。"><a href="#2、打开本地服务器。" class="headerlink" title="2、打开本地服务器。"></a>2、打开本地服务器。</h3><p>先查看一下自己的ip。我这边的ip是192.168.0.124网卡是eth0</p><p><img src="https://i.loli.net/2018/11/14/5bec107927c11.png" alt="1.png"></p><p>在终端输入 service apache2 start 开启阿帕奇。</p><p><img src="https://i.loli.net/2018/11/14/5bec10fa53aba.png" alt="2.png"></p><p>在浏览器输入自己的ip出现页面就代表开启成功。</p><p><img src="https://i.loli.net/2018/11/14/5bec119c252a8.png" alt="3.png"></p><h3 id="3、修改html。"><a href="#3、修改html。" class="headerlink" title="3、修改html。"></a>3、修改html。</h3><p>打开文件管理，选择其他位置然后点击计算机。</p><p><img src="https://i.loli.net/2018/11/14/5bec123727834.png" alt="4.png"></p><p>选择var文件夹</p><p><img src="https://i.loli.net/2018/11/14/5bec12af40b38.png" alt="5.png"></p><p>继续选择www文件夹</p><p><img src="https://i.loli.net/2018/11/14/5bec130ff1d1b.png" alt="6.png"></p><p>选择html文件夹</p><p><img src="https://i.loli.net/2018/11/14/5bec136bb3f53.png" alt="7.png"></p><p>选择html文件夹里面的index.html页面右键使用其他程序打开</p><p><img src="https://i.loli.net/2018/11/14/5bec13e78924c.png" alt="8.png"></p><p>选择文本编辑器</p><p><img src="https://i.loli.net/2018/11/14/5bec1444a21fe.png" alt="9.png"></p><p>会html的自己添加一些内容，不会的就全部删除自己加上自己想要的内容我这里就直接删除了。</p><p><img src="https://i.loli.net/2018/11/14/5bec14f450e6a.png" alt="10.png"></p><p>在浏览器重新访问一下更改成功。</p><p><img src="https://i.loli.net/2018/11/14/5bec152d4947d.png" alt="11.png"></p><h3 id="4、配置ettercap-dns信息"><a href="#4、配置ettercap-dns信息" class="headerlink" title="4、配置ettercap dns信息"></a>4、配置ettercap dns信息</h3><p>文件在目录/etc/ettercap/</p><p><img src="https://i.loli.net/2018/11/14/5bec16140853e.png" alt="12.png"></p><p><img src="https://i.loli.net/2018/11/14/5bec165f5e1e8.png" alt="13.png"></p><p><img src="https://i.loli.net/2018/11/14/5bec16e4a9af3.png" alt="14.png"></p><p>使用文本编辑器打开,找到图主标记的部分</p><p><a href="https://i.loli.net/2018/11/14/5bec177a1f40e.png" target="_blank" rel="external">15.png</a></p><p>添加上 *.com  A 自己的ip  代表吧所有com的域名都解析到你这边过来</p><p><img src="https://i.loli.net/2018/11/14/5bec17f86a748.png" alt="16.png"></p><p>然后保存配置完成！</p><h3 id="5、DNS劫持"><a href="#5、DNS劫持" class="headerlink" title="5、DNS劫持"></a>5、DNS劫持</h3><p>在终端输 ettercap -G 启动软件</p><p><img src="https://i.loli.net/2018/11/14/5bec18936d5b1.png" alt="17.png"></p><p>选择Sinff 点击第一个</p><p><img src="https://i.loli.net/2018/11/14/5bec18ea2f137.png" alt="18.png"></p><p>选择好网卡点击确定</p><p><img src="https://i.loli.net/2018/11/14/5bec19742611b.png" alt="19.png"></p><p>点击 Hosts 选择Scan for hosts</p><p><img src="https://i.loli.net/2018/11/14/5bec19d555594.png" alt="20.png"></p><p>点击 Hosts 选择host list</p><p><img src="https://i.loli.net/2018/11/14/5bec1a26d9dd6.png" alt="21.png"></p><p>选择好网关然后点击 Add to Target 1 添加到攻击1</p><p><img src="https://i.loli.net/2018/11/14/5bec1ac3d194d.png" alt="22.png"></p><p>选择要攻击的ip添加到攻击2</p><p><img src="https://i.loli.net/2018/11/14/5bec1b60c0b09.png" alt="23.png"></p><p>选择Mitm选择第一个。</p><p><img src="https://i.loli.net/2018/11/14/5bec1c12811d1.png" alt="24.png"></p><p>勾选第一个点击确定</p><p><img src="https://i.loli.net/2018/11/14/5bec1c70eef76.png" alt="25.png"></p><p>选择插件,点击Plugins 选择Manage the plugins</p><p><img src="https://i.loli.net/2018/11/14/5bec1d43d7726.png" alt="26.png"></p><p>双击 dns_spoof 使用插件</p><p><img src="https://i.loli.net/2018/11/14/5bec1da378855.png" alt="27.png"></p><p>点击 start 点击start sniffing 来启动</p><p><img src="https://i.loli.net/2018/11/14/5bec1e227a803.png" alt="28.png"></p><p>来到靶机查看效果,访问一个4399，成功劫持</p><p><img src="https://i.loli.net/2018/11/14/5bec1ed25fabe.png" alt="29.png"></p><p>版权声明：本文为博主原创文章,转载请标明出处。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 局域网安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kali </tag>
+            
+            <tag> 渗透工具 </tag>
+            
+            <tag> 局域网安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>让你的同学/基友断网。</title>
       <link href="/2018/11/12/arpduanwang/"/>
       <url>/2018/11/12/arpduanwang/</url>

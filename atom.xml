@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="mo3.top/"/>
-  <updated>2018-11-12T11:24:55.159Z</updated>
+  <updated>2018-11-14T13:12:40.947Z</updated>
   <id>mo3.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>局域网DNS劫持</title>
+    <link href="mo3.top/2018/11/14/dnsjiechi/"/>
+    <id>mo3.top/2018/11/14/dnsjiechi/</id>
+    <published>2018-11-14T11:53:58.000Z</published>
+    <updated>2018-11-14T13:12:40.947Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;DNS劫持又称域名劫持，是指在劫持的网络范围内拦截域名解析的请求&lt;br&gt;局域网劫持, 攻击者通过伪装成网关, 劫持受害者的网络请求, 将网络请求拦截到指定的服务器&lt;/p&gt;
+&lt;h3 id=&quot;1、试验环境。&quot;&gt;&lt;a href=&quot;#1、试验环境。&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="局域网安全" scheme="mo3.top/categories/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="kali" scheme="mo3.top/tags/kali/"/>
+    
+      <category term="渗透工具" scheme="mo3.top/tags/%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="局域网安全" scheme="mo3.top/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>让你的同学/基友断网。</title>
