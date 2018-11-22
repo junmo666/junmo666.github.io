@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>hydra爆破工具</title>
+      <link href="/2018/11/22/hydragongju/"/>
+      <url>/2018/11/22/hydragongju/</url>
+      
+        <content type="html"><![CDATA[<p>hydra是著名黑客组织thc的一款开源的暴力密码破解工具，可以在线破解多种密码。</p><p>具体使用方法<br>hydra &lt;参数&gt; <ip地址> &lt;服务名&gt;<br>hydra的参数是区分大小写的.<br>hydra支持的服务有:telnet ftp ssh mysql mssql vnc pcanywhere RDP(3389)等.<br>hydra的一些参数:<br>-R 继续从上一次的进度开始爆破<br>-s <port> 指定端口<br>-l <username> 指定登录的用户名<br>-L <username-list> 指定用户名字典<br>-p <password> 指定密码<br>-t <number> 设置线程数<br>-P <passwd-list> 指定密码字典<br>-v 显示详细过程</passwd-list></number></password></username-list></username></port></ip地址></p><h3 id="1、软件安装"><a href="#1、软件安装" class="headerlink" title="1、软件安装"></a>1、软件安装</h3><blockquote><p>因为kali linux 自带了,所以我就教大家windows下安装</p></blockquote><p>下载链接<a href="https://pan.baidu.com/s/1OzaO41KnGicpGBr3x24khg" target="_blank" rel="external">https://pan.baidu.com/s/1OzaO41KnGicpGBr3x24khg</a></p><p>先下载下来,然后解压出来。</p><p><img src="https://i.loli.net/2018/11/22/5bf6ab46bfe90.png" alt="1.png"></p><h3 id="2、添加全局"><a href="#2、添加全局" class="headerlink" title="2、添加全局"></a>2、添加全局</h3><p>右键桌面上的计算机，点击属性。</p><p><img src="https://i.loli.net/2018/11/22/5bf6ac1474e37.png" alt="2.png"></p><p>点击高级系统设置</p><p><img src="https://i.loli.net/2018/11/22/5bf6ac806e2cc.png" alt="3.png"></p><p>点击环境变量。</p><p><img src="https://i.loli.net/2018/11/22/5bf6acbbb7888.png" alt="4.png"></p><p>然后点击新建。</p><p><img src="https://i.loli.net/2018/11/22/5bf6b06e08605.png" alt="5.png"></p><p>变量名PATH变量值是你hydra的文件夹地址</p><p><img src="https://i.loli.net/2018/11/22/5bf6b0b36db6d.png" alt="6.png"></p><p>然后打开一个cmd输入hydra可以运行就是配置成功。</p><p><img src="https://i.loli.net/2018/11/22/5bf6b12a73c4e.png" alt="7.png"></p><h3 id="3、演示爆破ftp-telnet"><a href="#3、演示爆破ftp-telnet" class="headerlink" title="3、演示爆破ftp,telnet"></a>3、演示爆破ftp,telnet</h3><p>先来爆破一下ftp,目标ip是192.168.0.118,这里演示我用的是kali</p><p>在终端命令行输入, hydra -L 1.txt -P 1.txt -t 10 -v 192.168.0.118 ftp   <strong>-L是代表指定用户字典为1.txt,-P 密码字典为1.txt ,-t设置线程为10，-v 显示详细过程 然后是ip 然后是ftp</strong></p><p><img src="https://i.loli.net/2018/11/22/5bf6b4a031137.png" alt="8.png"></p><p>爆破成功.密码账号都为root。</p><p><img src="https://i.loli.net/2018/11/22/5bf6b56d2668b.png" alt="9.png"></p><p>爆破telnet输入, hydra -L 1.txt -P 1.txt -t 10 -v 192.168.0.118 telnet  <label style="color:blue">也可以使用指定用户进行爆破参数最上面有灵活运用。</label></p><p><img src="https://i.loli.net/2018/11/22/5bf6b67ad3018.png" alt="10.png"></p><p>得到结果</p><p><img src="https://i.loli.net/2018/11/22/5bf6b6f43a78f.png" alt="11.png"></p><p>Windows下的使用方法也是一样,可以提前用nmap扫描一下开放这些可爆破的端口。</p><p>版权声明：本文为博主原创文章,转载请标明出处。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> kali </tag>
+            
+            <tag> 渗透工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>局域网DNS劫持</title>
       <link href="/2018/11/14/dnsjiechi/"/>
       <url>/2018/11/14/dnsjiechi/</url>
