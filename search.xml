@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>cuppzidian</title>
+      <link href="/2018/11/24/cuppzidian/"/>
+      <url>/2018/11/24/cuppzidian/</url>
+      
+        <content type="html"><![CDATA[<p>Cupp是一款用Python语言写成的可交互性的字典生成脚本。尤其适合社会工程学，当你收集到目标的具体信息后，你就可以通过这个工具来智能化生成关于目标的字典。当对目标进行渗透测试的时候，常见密码爆破不成功，大批量的字典耗时太长时，就需要一份结合具体目标的带社工性质的字典，可以很大提升爆破效率，这时候就可以利用Cupp打造一份。</p><h3 id="1、安装cupp"><a href="#1、安装cupp" class="headerlink" title="1、安装cupp"></a>1、安装cupp</h3><p>因为在Windows下安装需要Python环境所以这里我选择在kali下安装，当然要安装Windows也可以去GitHub直接搜索cupp。</p><blockquote><p>安装：apt-get install cupp</p></blockquote><h3 id="2、使用说明"><a href="#2、使用说明" class="headerlink" title="2、使用说明"></a>2、使用说明</h3><blockquote><p>-v   查看cupp版本号</p><p>-h   查看参数列表</p><p>-l    从github仓库下载字典</p><p>-i    使用交互式的提问创建用户密码字典，cupp的主要功能，本文主要演示此参数</p><p>-w   在已存在的字典上进行扩展</p></blockquote><p>我们这里直接使用 cupp -i</p><p><img src="https://i.loli.net/2018/11/24/5bf937cba1358.png" alt="1.png"></p><p>然后和工具开始交互，会让你输入被攻击目标的姓、名、外号、生日、父母的名字、外号、生日、子女的名字、外号、生日等等一系列的信息。如果你有这些信息，直接输入，如果没有直接回车进行下一步。</p><p><img src="https://i.loli.net/2018/11/24/5bf93a3c247c2.png" alt="2.png"></p><blockquote><p>First Name:  名<br>Surname:  姓<br>Nickname:   绰号<br>Birthdate (DDMMYYYY): 生日 输入生日信息的时候是按照日、月、年的顺序，如11022012就是2010年2月11<br>Partners) name:  伙伴名<br>Partners) nickname:  伙伴姓<br>Partners) birthdate (DDMMYYYY): 伙伴的生日<br>Child’s name:  孩子的名<br>Child’s nickname:  孩子的绰号<br>Child’s birthdate (DDMMYYYY):  孩子的生日<br>Pet’s name:  宠物名字<br>Company name:  公司名字<br>Do you want to add some key words about the victim? Y/[N]:  添加一些关键词 不需要就回车<br>Do you want to add special chars at the end of words? Y/[N]:  在单词末尾加上特殊字符 不需要就回车<br>Do you want to add some random numbers at the end of words? Y/[N]:  在单词末尾加上一些随机数 不需要就回车</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 渗透工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 渗透工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>hydra爆破工具</title>
       <link href="/2018/11/22/hydragongju/"/>
       <url>/2018/11/22/hydragongju/</url>
@@ -19,9 +44,9 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> 渗透工具 </tag>
+            
+            <tag> kali </tag>
             
         </tags>
       
@@ -44,9 +69,9 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> 渗透工具 </tag>
+            
+            <tag> kali </tag>
             
             <tag> 局域网安全 </tag>
             
@@ -71,9 +96,9 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> 渗透工具 </tag>
+            
+            <tag> kali </tag>
             
             <tag> 局域网安全 </tag>
             
@@ -98,9 +123,9 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> 渗透工具 </tag>
+            
+            <tag> kali </tag>
             
             <tag> 局域网安全 </tag>
             
@@ -196,9 +221,9 @@
       
         <tags>
             
-            <tag> kali </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> kali </tag>
             
         </tags>
       

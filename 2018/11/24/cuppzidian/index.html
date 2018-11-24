@@ -5,10 +5,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="局域网DNS劫持, JunMo的博客">
-    <meta name="description" content="DNS劫持又称域名劫持，是指在劫持的网络范围内拦截域名解析的请求局域网劫持, 攻击者通过伪装成网关, 劫持受害者的网络请求, 将网络请求拦截到指定的服务器
-1、试验环境。
-攻击者Kali系统 IP；192.168.0.124受害者win10">
+    <meta name="keywords" content="cuppzidian, JunMo的博客">
+    <meta name="description" content="Cupp是一款用Python语言写成的可交互性的字典生成脚本。尤其适合社会工程学，当你收集到目标的具体信息后，你就可以通过这个工具来智能化生成关于目标的字典。当对目标进行渗透测试的时候，常见密码爆破不成功，大批量的字典耗时太长时，就需要一份">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>局域网DNS劫持 | JunMo的博客</title>
+    <title>cuppzidian | JunMo的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -191,13 +189,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/11/14/5bec1f4741e89.png')">
+<div class="bg-cover post-cover" style="background-image: url('https://i.loli.net/2018/11/24/5bf93b863b67a.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        局域网DNS劫持
+                        cuppzidian
                     </div>
                 </div>
             </div>
@@ -283,16 +281,12 @@
             
             <div class="article-tag">
                 
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
+                </a>
+                
                 <a href="/tags/渗透工具/" target="_blank">
                     <span class="chip bg-color">渗透工具</span>
-                </a>
-                
-                <a href="/tags/kali/" target="_blank">
-                    <span class="chip bg-color">kali</span>
-                </a>
-                
-                <a href="/tags/局域网安全/" target="_blank">
-                    <span class="chip bg-color">局域网安全</span>
                 </a>
                 
             </div>
@@ -302,83 +296,40 @@
                 <span class="post-cate">
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/局域网安全/" class="post-category" target="_blank">
-                        局域网安全
+                    <a href="/categories/渗透工具/" class="post-category" target="_blank">
+                        渗透工具
                     </a>
                     
                 </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-11-14
+                    <i class="fa fa-clock-o fa-fw"></i>2018-11-24
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>DNS劫持又称域名劫持，是指在劫持的网络范围内拦截域名解析的请求<br>局域网劫持, 攻击者通过伪装成网关, 劫持受害者的网络请求, 将网络请求拦截到指定的服务器</p>
-<h3 id="1、试验环境。"><a href="#1、试验环境。" class="headerlink" title="1、试验环境。"></a>1、试验环境。</h3><blockquote>
-<p>攻击者Kali系统 IP；192.168.0.124<br>受害者win10系统 IP:192.168.0.9</p>
+                <p>Cupp是一款用Python语言写成的可交互性的字典生成脚本。尤其适合社会工程学，当你收集到目标的具体信息后，你就可以通过这个工具来智能化生成关于目标的字典。当对目标进行渗透测试的时候，常见密码爆破不成功，大批量的字典耗时太长时，就需要一份结合具体目标的带社工性质的字典，可以很大提升爆破效率，这时候就可以利用Cupp打造一份。</p>
+<h3 id="1、安装cupp"><a href="#1、安装cupp" class="headerlink" title="1、安装cupp"></a>1、安装cupp</h3><p>因为在Windows下安装需要Python环境所以这里我选择在kali下安装，当然要安装Windows也可以去GitHub直接搜索cupp。</p>
+<blockquote>
+<p>安装：apt-get install cupp</p>
 </blockquote>
-<h3 id="2、打开本地服务器。"><a href="#2、打开本地服务器。" class="headerlink" title="2、打开本地服务器。"></a>2、打开本地服务器。</h3><p>先查看一下自己的ip。我这边的ip是192.168.0.124网卡是eth0</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec107927c11.png" alt="1.png"></p>
-<p>在终端输入 service apache2 start 开启阿帕奇。</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec10fa53aba.png" alt="2.png"></p>
-<p>在浏览器输入自己的ip出现页面就代表开启成功。</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec119c252a8.png" alt="3.png"></p>
-<h3 id="3、修改html。"><a href="#3、修改html。" class="headerlink" title="3、修改html。"></a>3、修改html。</h3><p>打开文件管理，选择其他位置然后点击计算机。</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec123727834.png" alt="4.png"></p>
-<p>选择var文件夹</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec12af40b38.png" alt="5.png"></p>
-<p>继续选择www文件夹</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec130ff1d1b.png" alt="6.png"></p>
-<p>选择html文件夹</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec136bb3f53.png" alt="7.png"></p>
-<p>选择html文件夹里面的index.html页面右键使用其他程序打开</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec13e78924c.png" alt="8.png"></p>
-<p>选择文本编辑器</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1444a21fe.png" alt="9.png"></p>
-<p>会html的自己添加一些内容，不会的就全部删除自己加上自己想要的内容我这里就直接删除了。</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec14f450e6a.png" alt="10.png"></p>
-<p>在浏览器重新访问一下更改成功。</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec152d4947d.png" alt="11.png"></p>
-<h3 id="4、配置ettercap-dns信息"><a href="#4、配置ettercap-dns信息" class="headerlink" title="4、配置ettercap dns信息"></a>4、配置ettercap dns信息</h3><p>文件在目录/etc/ettercap/</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec16140853e.png" alt="12.png"></p>
-<p><img src="https://i.loli.net/2018/11/14/5bec165f5e1e8.png" alt="13.png"></p>
-<p><img src="https://i.loli.net/2018/11/14/5bec16e4a9af3.png" alt="14.png"></p>
-<p>使用文本编辑器打开,找到图主标记的部分</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec177a1f40e.png" alt="15.png"></p>
-<p>添加上 *.com  A 自己的ip  代表吧所有com的域名都解析到你这边过来</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec17f86a748.png" alt="16.png"></p>
-<p>然后保存配置完成！</p>
-<h3 id="5、DNS劫持"><a href="#5、DNS劫持" class="headerlink" title="5、DNS劫持"></a>5、DNS劫持</h3><p>在终端输 ettercap -G 启动软件</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec18936d5b1.png" alt="17.png"></p>
-<p>选择Sinff 点击第一个</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec18ea2f137.png" alt="18.png"></p>
-<p>选择好网卡点击确定</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec19742611b.png" alt="19.png"></p>
-<p>点击 Hosts 选择Scan for hosts</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec19d555594.png" alt="20.png"></p>
-<p>点击 Hosts 选择host list</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1a26d9dd6.png" alt="21.png"></p>
-<p>选择好网关然后点击 Add to Target 1 添加到攻击1</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1ac3d194d.png" alt="22.png"></p>
-<p>选择要攻击的ip添加到攻击2</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1b60c0b09.png" alt="23.png"></p>
-<p>选择Mitm选择第一个。</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1c12811d1.png" alt="24.png"></p>
-<p>勾选第一个点击确定</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1c70eef76.png" alt="25.png"></p>
-<p>选择插件,点击Plugins 选择Manage the plugins</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1d43d7726.png" alt="26.png"></p>
-<p>双击 dns_spoof 使用插件</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1da378855.png" alt="27.png"></p>
-<p>点击 start 点击start sniffing 来启动</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1e227a803.png" alt="28.png"></p>
-<p>来到靶机查看效果,访问一个4399，成功劫持</p>
-<p><img src="https://i.loli.net/2018/11/14/5bec1ed25fabe.png" alt="29.png"></p>
-<p>版权声明：本文为博主原创文章,转载请标明出处。</p>
+<h3 id="2、使用说明"><a href="#2、使用说明" class="headerlink" title="2、使用说明"></a>2、使用说明</h3><blockquote>
+<p>-v   查看cupp版本号</p>
+<p>-h   查看参数列表</p>
+<p>-l    从github仓库下载字典</p>
+<p>-i    使用交互式的提问创建用户密码字典，cupp的主要功能，本文主要演示此参数</p>
+<p>-w   在已存在的字典上进行扩展</p>
+</blockquote>
+<p>我们这里直接使用 cupp -i</p>
+<p><img src="https://i.loli.net/2018/11/24/5bf937cba1358.png" alt="1.png"></p>
+<p>然后和工具开始交互，会让你输入被攻击目标的姓、名、外号、生日、父母的名字、外号、生日、子女的名字、外号、生日等等一系列的信息。如果你有这些信息，直接输入，如果没有直接回车进行下一步。</p>
+<p><img src="https://i.loli.net/2018/11/24/5bf93a3c247c2.png" alt="2.png"></p>
+<blockquote>
+<p>First Name:  名<br>Surname:  姓<br>Nickname:   绰号<br>Birthdate (DDMMYYYY): 生日 输入生日信息的时候是按照日、月、年的顺序，如11022012就是2010年2月11<br>Partners) name:  伙伴名<br>Partners) nickname:  伙伴姓<br>Partners) birthdate (DDMMYYYY): 伙伴的生日<br>Child’s name:  孩子的名<br>Child’s nickname:  孩子的绰号<br>Child’s birthdate (DDMMYYYY):  孩子的生日<br>Pet’s name:  宠物名字<br>Company name:  公司名字<br>Do you want to add some key words about the victim? Y/[N]:  添加一些关键词 不需要就回车<br>Do you want to add special chars at the end of words? Y/[N]:  在单词末尾加上特殊字符 不需要就回车<br>Do you want to add some random numbers at the end of words? Y/[N]:  在单词末尾加上一些随机数 不需要就回车</p>
+</blockquote>
 
             </div>
             <hr/>
@@ -517,7 +468,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="mo3.top" class="b-link-green">JunMo的博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/11/14/dnsjiechi/" class="b-link-green">局域网DNS劫持</a>
+                    <a href="/2018/11/24/cuppzidian/" class="b-link-green">cuppzidian</a>
                 </p>
             </div>
         </div>
@@ -558,8 +509,55 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="card">
+                <a href="/2018/11/24/cuppzidian/">
+                    <div class="card-image">
+                        
+                        <img src="https://i.loli.net/2018/11/24/5bf93b863b67a.jpg" class="responsive-img" alt="cuppzidian">
+                        
+                        <span class="card-title">cuppzidian</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">Cupp是一款用Python语言写成的可交互性的字典生成脚本。尤其适合社会工程学，当你收集到目标的具体信息后，你就可以通过这个工具来智能化生成关于目标的字典。当对目标进行渗透测试的时候，常见密码爆破不成功，大批量的字典耗时太长时，就需要一份</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/渗透工具/" class="post-category" target="_blank">
+                                    渗透工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/渗透工具/" target="_blank">
+                        <span class="chip bg-color">渗透工具</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
                 <a href="/2018/11/22/hydragongju/">
                     <div class="card-image">
@@ -573,9 +571,9 @@
                     <div class="summary">hydra是著名黑客组织thc的一款开源的暴力密码破解工具，可以在线破解多种密码。
 具体使用方法hydra &lt;参数&gt;  &lt;服务名&gt;hydra的参数是区分大小写的.hydra支持的服务有:telnet ftp ssh </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -604,62 +602,6 @@
             </div>
         </div>
         
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
-            <div class="card">
-                <a href="/2018/11/12/arpduanwang/">
-                    <div class="card-image">
-                        
-                        <img src="https://i.loli.net/2018/11/12/5be962fd5f0b7.png" class="responsive-img" alt="让你的同学/基友断网。">
-                        
-                        <span class="card-title">让你的同学/基友断网。</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">让你的基友在打游戏时突然断网是不是很有意思呢。本章就来教大家周末操作吧！
-攻击方需要与被攻击方在同一个内网，攻击者需要知道被攻击者的IP。
-需要的材料有；
-
-kali linux 前面有教大家如何安装哦!
-
-1、查看局域网里面在线的ip打开</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/局域网安全/" class="post-category" target="_blank">
-                                    局域网安全
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/渗透工具/" target="_blank">
-                        <span class="chip bg-color">渗透工具</span>
-                    </a>
-                    
-                    <a href="/tags/kali/" target="_blank">
-                        <span class="chip bg-color">kali</span>
-                    </a>
-                    
-                    <a href="/tags/局域网安全/" target="_blank">
-                        <span class="chip bg-color">局域网安全</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
     </div>
 </article>
 </div>
@@ -668,7 +610,7 @@ kali linux 前面有教大家如何安装哦!
         <div class="toc-widget">
             <h4>目录</h4>
             <div id="toc-content">
-                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、试验环境。"><span class="post-toc-text">1、试验环境。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、打开本地服务器。"><span class="post-toc-text">2、打开本地服务器。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、修改html。"><span class="post-toc-text">3、修改html。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、配置ettercap-dns信息"><span class="post-toc-text">4、配置ettercap dns信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、DNS劫持"><span class="post-toc-text">5、DNS劫持</span></a></li></ol>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、安装cupp"><span class="post-toc-text">1、安装cupp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、使用说明"><span class="post-toc-text">2、使用说明</span></a></li></ol>
             </div>
         </div>
     </div>
