@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="mo3.top/"/>
-  <updated>2018-11-24T11:59:45.143Z</updated>
+  <updated>2018-11-26T13:04:46.520Z</updated>
   <id>mo3.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑客术语</title>
+    <link href="mo3.top/2018/11/26/hackshuyu/"/>
+    <id>mo3.top/2018/11/26/hackshuyu/</id>
+    <published>2018-11-26T12:59:18.000Z</published>
+    <updated>2018-11-26T13:04:46.520Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;学习黑客入门知识，当然得先知道常用的黑客术语，这个专业术语，也就是一些有特殊指定的名词，每个专业都有其自己的专有术语，经常使用电脑的朋友，大多在网络中也经常会接触到此类的术语，下面我们就来简单了解一些常用的术语吧。&lt;/p&gt;
+&lt;h3 id=&quot;1、肉鸡&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>cupp社工字典生成器</title>
